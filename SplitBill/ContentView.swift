@@ -8,26 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var name: String = ""
-    @State private var email: String = ""
-    @State private var age: Int = 18
-    @State private var receiveNewsletter: Bool = false
-    
     var body: some View {
         NavigationStack {
             Form {
-                Section(header: Text("Personal Information")) {
-                    TextField("Name", text: $name)
-                    TextField("Email", text: $email)
-                    Stepper(value: $age, in: 18...100) {
-                        Text("Age: \(age)")
-                    }
+                Text("Hello, world!")
+                Text("Hello, world!")
+                
+                Section {
+                    Text("Hello, world!")
                 }
                 
                 Section(header: Text("Preferences")) {
-                    Toggle(isOn: $receiveNewsletter) {
-                        Text("Receive Newsletter")
-                    }
+                    Text("Hello, world!")
+                    Text("Hello, world!")
                 }
             }
             .navigationTitle("User Form")
