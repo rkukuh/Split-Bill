@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    var name = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Form {
+            TextField("Enter your name", text: name)
         }
-        .padding()
     }
 }
 
