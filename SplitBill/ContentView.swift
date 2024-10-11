@@ -32,6 +32,17 @@ struct ContentView: View {
                     .pickerStyle(.navigationLink)
                 }
                 
+                Section {
+                    Text("How much tip do you want to leave?")
+                    
+                    Picker("Tip percentage", selection: $tipPercentage) {
+                        ForEach(tipPercentages, id: \.self) { tipPercentage in
+                            Text(tipPercentage, format: .percent)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                }
+                
                 Text("Payment amount:")
                 Text(checkAmount,
                      format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
